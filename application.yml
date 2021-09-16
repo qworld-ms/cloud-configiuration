@@ -1,0 +1,19 @@
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    
+    
+microservice:
+  user-service-dev:
+    endpoints:
+      endpoint:
+        uri: http://USER-SERVICE/
+  transaction-service-dev:
+    endpoints:
+      endpoint:
+        uri: http://TRANSACTION-SERVICE/   
