@@ -6,8 +6,8 @@ eureka:
       defaultZone: https://service-registry-dev.azurewebsites.net:443/eureka
   instance:
     hostname: service-registry-dev.azurewebsites.net
-    secure-port-enabled: true
-    nonsecure-port-enabled: false
+    secure-port-enabled: false
+    nonsecure-port-enabled: true
     nonSecurePort: 80
     securePort: 443
     instanceId: ${eureka.instance.hostname}:${spring.application.name}:443
