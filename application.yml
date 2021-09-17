@@ -2,10 +2,18 @@ eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+    serviceUrl:
+      defaultZone: https://service-registry-dev.azurewebsites.net:8761/eureka
   instance:
-    hostname: localhost
+    hostname: service-registry-dev.azurewebsites.net
+    secure-port-enabled: true
+    nonsecure-port-enabled: false
+    nonSecurePort: 80
+    securePort: 8761
+    instanceId: ${eureka.instance.hostname}:${spring.application.name}:8761
+    statusPageUrl: https://${eureka.hostname}:8761/actuator/info
+    healthCheckUrl: https://${eureka.hostname}:8761/actuator/health
+    secureHealthCheckUrl: https://${eureka.hostname}:8761/actuator/health
     
     
 microservice:
