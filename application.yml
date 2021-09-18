@@ -17,13 +17,4 @@ eureka:
     healthCheckUrl: https://${eureka.hostname}:8761/actuator/health
     secureHealthCheckUrl: https://${eureka.hostname}:8761/actuator/health    
     
-    
-microservice:
-  user-service-dev:
-    endpoints:
-      endpoint:
-        uri: http://USER-SERVICE/
-  transaction-service-dev:
-    endpoints:
-      endpoint:
-        uri: http://TRANSACTION-SERVICE/   
+
